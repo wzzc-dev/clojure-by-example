@@ -46,7 +46,7 @@ To ensure that you are loading the correct version of nREPL and CIDER, we start
 by running the jack-in command but customizing it. In Emacs, this is
 `C-u M-x cider-jack-in`. An example of what the default command looks like:
 
-```
+```shell
 /opt/homebrew/bin/clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version "1.0.0"} cider/cider-nrepl {:mvn/version "0.28.6"}} :aliases {:cider/nrepl {:main-opts ["-m" "nrepl.cmdline" "--middleware" "[cider.nrepl/cider-middleware]"]}}}' -M:cider/nrepl
 ```
 
@@ -58,7 +58,7 @@ Below, we show the command after we delete the use of the `:cider/nrepl` alias
 and replace it with the `:dev:cider` alias configured in our deps.edn, which
 calls our custom `-main` function with the CIDER middlewares.
 
-```
+```shell
 /opt/homebrew/bin/clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version "1.0.0"} cider/cider-nrepl {:mvn/version "0.28.6"}} :aliases {:cider/nrepl {:main-opts ["-m" "nrepl.cmdline" "--middleware" "[cider.nrepl/cider-middleware]"]}}}' -M:dev:cider
 ```
 
@@ -75,4 +75,3 @@ for showing me some cool stuff too!
 ## License & Copyright
 
 Licensed under MIT. Copyright Will Acton 2022.
-
