@@ -4,5 +4,5 @@
 (defn run [opts]
   (println "Hello World"))
 
-(defn -main []
+(defn -main [& args]
   (run ()))
