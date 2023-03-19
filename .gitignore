@@ -1,4 +1,6 @@
-.clj-kondo/.cache
 .cpcache
 .lsp
 target
+.nrepl-port
+hs_err_pid*.log
+**/.clj-kondo/.cache
