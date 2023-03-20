@@ -5,10 +5,6 @@
    [io.github.humbleui.ui :as ui]
    ;; [io.github.humbleui.window :as window]
    [wang.zhichuang.humble.app.state :as state])
-  (:import
-   [io.github.humbleui.skija Color ColorSpace]
-   [io.github.humbleui.jwm Window]
-   [io.github.humbleui.jwm.skija LayerMetalSkija])
   (:gen-class))
 
 (def app
@@ -17,18 +13,18 @@
    {}
    ;; just some random stuff
    (ui/center
-    (ui/label "Hello Humble!"))))
+    (ui/label "Hello from Humble UI! 👋"))))
 
 ;; reset current app state on eval of this ns
 (reset! state/*app app)
 
 (defn -main
   "Run once on app start, starting the humble app."
-  [& args]
+  [& _args]
   (ui/start-app!
    (reset! state/*window
            (ui/window
-            {:title    "Editor"
+            {:title    "Humble 🐝 UI"
              :bg-color 0xFFFFFFFF}
-            state/*app)))
+            #'app)))
   (state/redraw!))

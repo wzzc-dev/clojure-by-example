@@ -7,9 +7,9 @@
 (defn factorial [n]
   (apply * (take n (iterate inc 1))))
 
-(defn unless [test body] (if (not test) body))
+(defn unless [test body] (if (not test) body nil))
 
-(defn run [opts]
+(defn run [_opts]
   (println (take 5 (interpose :and (cycle [:lather :rinse :repeat]))))
   (println (take 20 (interleave (cycle (range 2))(cycle (range 3)))))
   (println (take 5 (iterate inc 1)))
@@ -25,5 +25,5 @@
   (println (macroexpand '#(count %))))
 
 
-(defn -main [& args]
+(defn -main [& _args]
   (run ()))

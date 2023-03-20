@@ -4,7 +4,6 @@
    [wang.zhichuang.humble.app.main :as main]
    [wang.zhichuang.humble.app.state :as state]
    [io.github.humbleui.app :as app]
-   [io.github.humbleui.debug :as debug]
    [io.github.humbleui.window :as window]
    [nrepl.cmdline :as nrepl]
    [clojure.tools.namespace.repl :as ns]))
