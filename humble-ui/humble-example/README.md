@@ -6,7 +6,11 @@ apps using [HumbleUI](https://github.com/HumbleUI/HumbleUI) and Clojure.
 ## Development
 
 ```clj
+clj -M -m wang.zhichuang.humble.app.main $@
+
 clj -M:dev -m user --interactive $@
+
+clj -M -m wang.zhichuang.humble.app.examples
 ```
 
 ### package
